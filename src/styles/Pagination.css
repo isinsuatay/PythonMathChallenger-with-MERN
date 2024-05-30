@@ -1,0 +1,13 @@
+
+.pagination {
+    margin: 20px;
+  }
+  
+  .pagination button {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+  }
+  

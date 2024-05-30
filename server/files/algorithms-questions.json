@@ -1,0 +1,106 @@
+[
+  {
+    "question": "Finding the Median Element in a Doubly Linked List",
+    "definition": "A doubly linked list is a data structure where each node points to both the next and previous node, allowing access from both the front and back, thus making data structures more efficient in certain cases.",
+    "description": "A function that finds the median element in a given doubly linked list."
+  },
+  {
+    "question":"Caesar Chiper",
+    "definition":"In the classical encryption method called the Caesar cipher, each letter is shifted a certain number of places in the alphabet.",
+    "description":" If the key is chosen as 3, what does the word 'HELLO WORLD' transform into in its encrypted form?"
+
+  },
+  {
+    "question":"Anagram Solutions",
+    "definition":"An anagram is a process of rearranging the letters of a word or phrase to create a new word or phrase that contains the same letters but in a different order.",
+    "description":"For each word in a given string, find all pairs of words in the same string that are anagrams of each other. Additionally, check whether each word is an anagram of itself, and return the results as a list."
+  },
+  {
+    "question":"Binary Search",
+    "definition":"You're given a sorted list nums and a target number target. Write a function to find the index of the target number in this list. If the target number is not in the list, return -1.",
+    "description":"Input: nums = [-1, 0, 3, 5, 9, 12], target = 9"
+
+  },
+  {
+    "question":"Array Rotation Algorithm with Direction and Step Control",
+    "definition":"You're asked to write an algorithm to rotate the elements in an array by a specified number of steps and in a particular direction. However, this algorithm will face some additional challenges:\nThe array could be very large, so the time and space complexity of your algorithm are important.\nThe rotation can be done both to the right and to the left.\nThe number of steps for rotation can be negative, which would reverse the direction of rotation.\nThe array can consist of both integers and strings.\nThe rotation operation should be done in-place; that is, no additional array should be created.",
+    "description":"Examples:\nInput: arr = [1, 2, 3, 4, 5], steps = 2, direction = 'right'\nOutput: [4, 5, 1, 2, 3]\nInput: arr = ['a', 'b', 'c', 'd'], steps = -1, direction = 'left'\nOutput: ['d', 'a', 'b', 'c']\nInput: arr = [1, 'a', 3, 'b', 5], steps = 3, direction = 'left'\nOutput: ['b', 5, 1, 'a', 3]\n\nHint:\n You can normalize the number of steps based on the length of the array using the modulo (%) operator. Also, be careful to handle negative step numbers and different directions."
+  },
+  {
+    "question":"Finding Longest Palindromic Substring with Linear Time Complexity",
+    "definition":"You're asked to develop an algorithm to find the longest palindromic substring of a given string of a certain size (N) with a time complexity of O(n), meaning it should grow linearly with the length of the string in the worst case.",
+    "description":"Additionally, this palindromic substring must definitely exist within the given string as another substring."
+
+  },
+  {
+    "question": "Comprehensive Numeric Expression Evaluation",
+    "definition": "Write a function that processes a given numerical expression (e.g., '3 + 2 * 4').",
+    "description": "A function that processes a given numerical expression and returns the result."
+  },
+  {
+    "question":"Finding Path in Binary Tree",
+    "definition":"Write a function that takes a binary tree and a target node as input and finds the path from the root to the target node in this tree.",
+    "description":"Input: root = [3,5,1,6,2,0,8,None,None,7,4], target = 5"
+  },
+  {
+    "question": "Finding the Longest Common Subsequence",
+    "definition": "The longest common subsequence is a subsequence in two strings that doesn't have to occur in the same order but must maintain the original order of elements.",
+    "description": "A function that finds the longest common subsequence between two given strings."
+  },
+  {
+    "question": "Minimum Window Substring",
+    "definition": "Given a string (S) and a character list (T), ",
+    "description": "find the minimum window in S which will contain all the characters in T."
+  },
+  {
+      "question": "Sudoku Solver",
+      "definition": "Write a program ",
+      "description":"to solve a Sudoku puzzle."
+  },  
+  {
+    "question":"Addition Chain",
+    "definition":"Generate the shortest addition chain to obtain a given number (n). ",
+    "description":"An addition chain is a sequence of operations where you add numbers together in a specific order to reach a target number."
+  },
+  {
+    "question":"Shortest Path Problem",
+    "definition":"The shortest path problem refers to finding the shortest route between two nodes in a weighted graph. Here, the weights of the edges between nodes (such as distance, cost, etc.) are crucial, aiming to determine the path with the smallest total weight. Algorithms like Dijkstra or similar ones are typically used to solve these types of problems.",
+    "description": "Given a weighted directed graph, find the shortest path (the path with the lowest total weight) between two nodes."
+  },
+  {
+    "question":"Crypto Key Finding Question",
+    "definition":"For a cryptography system, the task is to create a encryption key that satisfies the following conditions:Choose a random number between 1 and 1000 and name it as 'a'.The remainder when 'a' is divided by 17 should be 10.The remainder when 'a' is divided by 31 should be 15. Find the number 'a' that satisfies these conditions and create the encryption key.",
+    "description":"Finding the number 'a' that satisfies the required conditions"
+
+  },
+  {
+    "question":"Squares a Chess Knight Can Pass",
+    "definition":"Find all the squares that the chess knight can pass from a given starting position on the chessboard. ",
+    "description":"Determine the position of the knight and print the shape of the places on the board that it can pass on the console."
+  },
+  {
+    "question":"Triple Numbers Equal to Given Sum and Product",
+    "definition":"Find three numbers equal to a given target number, where the sum and product of these three numbers should be equal to the given number.",
+    "description":"This code uses a simple brute-force approach to find three numbers equal to a given number, where their sum and product are also equal to the given number."
+  },
+  {
+    "question":"Key Encryption",
+      "definition":"You need to create a key to encrypt a message. The key must satisfy the following conditions: Choose a random number between 1 and 100 and name it as 'p'.Choose a random number between 1 and 50 and name it as 'q'.'p' and 'q' must be prime numbers.'p' and 'q' must be different from each other.Calculate n = p • q and use n as the key. ",
+      "description":"Calculate the Euler's totient function of n: φ(n) = (p - 1) • (q - 1) and select a value for e using φ(n). The value of e should satisfy 1 < e < φ(n) and be coprime with φ(n).Find a value for d corresponding to the e value. d • e ≡ 1 (mod φ(n)) must hold.Use n and e values as the public key, and n and d values as the private key.Create a key that satisfies these conditions."
+  },
+  {
+    "question":"Reversible Prime Numbers",
+    "definition":"Find reversible prime numbers in a given range (for example, between 1 and 100).",
+    "description":"Reversible prime numbers are those that are prime both in their original form and when reversed."
+  },
+  {
+    "question":"Searching for a String in a Binary Search Tree (BST)",
+    "definition":"Search for a string in a given binary search tree (BST) and check if the string exists in the tree.",
+    "description":"Searching for a string in a binary search tree (BST) involves comparing the string starting from the root. If the string is smaller than the root, we move to the left; if it's larger, we move to the right. This process continues until we find a match or reach a leaf node where the string is not found. If the string matches the value of the current node, then the string is found in the tree; otherwise, it's not found."
+  },
+  {
+    "question":"Diffie-Hellman Key Exchange",
+    "definition":"Alice and Bob are planning to establish a secure communication using Diffie-Hellman key exchange. During this key exchange, Alice and Bob will communicate with each other to create a shared key.As a first step, Alice and Bob need to choose a common prime number and a base number. This prime number should be large enough to ensure secure communication.Then, both parties will select their own private keys: a for Alice and b for Bob. These private keys should be smaller than the chosen prime number and predetermined.Finally, both Alice and Bob will use the chosen prime number, base number, and their private keys to generate a shared key.",
+    "description":"Given this scenario, write a Python code with the following parameters:Prime number p=353 Base number g=3 Alice's private key a=97 Bob's private key b=233 Implement the Diffie-Hellman key exchange and compute the shared key."
+  }
+]

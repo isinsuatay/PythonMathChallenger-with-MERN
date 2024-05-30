@@ -1,0 +1,61 @@
+[
+  {
+    "question": "Creating and Visualizing an NxN Unit Matrix with Python",
+    "answer": "def print_identity_matrix(n):\n    # Create an NxN identity matrix\n    identity_matrix = [[1 if i == j else 0 for j in range(n)] for i in range(n)]\n    \n    # Print the matrix\n    for row in identity_matrix:\n        print(' '.join(map(str, row)))\n\n# Set the value of N\nN = 5\nprint_identity_matrix(N)"
+  },
+  {
+    "question":"Filling Matrix in Spiral Order",
+    "answer": "def fill_matrix(n):\n    matrix = [[0] * n for _ in range(n)]\n    top, bottom, left, right = 0, n - 1, 0, n - 1\n    num = 1\n\n    while num <= n * n:\n        for i in range(left, right + 1):\n            matrix[top][i] = num\n            num += 1\n        top += 1\n\n        for i in range(top, bottom + 1):\n            matrix[i][right] = num\n            num += 1\n        right -= 1\n\n        for i in range(right, left - 1, -1):\n            matrix[bottom][i] = num\n            num += 1\n        bottom -= 1\n\n        for i in range(bottom, top - 1, -1):\n            matrix[i][left] = num\n            num += 1\n        left += 1\n\n    return matrix\n\n# Example usage:\nn = 4\nresult = fill_matrix(n)\nfor row in result:\n    print(row)"
+
+  },
+  {
+    "question": "Python Functions for Generating and Checking Cantor Set Membership",
+    "answer": "def CantorSet(n):\n    set_ = set()\n    for i in range(2**n + 1):\n        set_.add(i / (2**n))\n    return sorted(list(set_))\n\ndef IsInCantorSet(x, n):\n    subset = CantorSet(n)\n    return x in subset\n\n# Example for Question 1\nn_value = 3\ncantor_set = CantorSet(n_value)\nprint(f\"Cantor Set (n = {n_value}):\", cantor_set)\n\n# Example for Question 2\nx_value = 0.5\ncheck = IsInCantorSet(x_value, n_value)\nprint(f\"Is {x_value} in the Cantor Set?:\", check)"
+  },
+  {
+    "question": "Python Programs for Solving Linear Equations with Given Coefficients",
+    "answer": "import numpy as np\n\n# Function to solve Ax + By = C\ndef solve_linear_equation(a, b, c):\n    A = np.array([[a, b]])\n    B = np.array([c])\n    solution = np.linalg.lstsq(A, B, rcond=None)[0]\n    return solution\n\n# 1. Solve 3x + 5y = 1\nsolution1 = solve_linear_equation(3, 5, 1)\nprint(\"Solution for 3x + 5y = 1:\")\nprint(\"x =\", solution1[0])\nprint(\"y =\", solution1[1] if len(solution1) > 1 else \"Any value\")\n\n# 2. Solve 19x + 27w = 1\nsolution2 = solve_linear_equation(19, 27, 1)\nprint(\"Solution for 19x + 27w = 1:\")\nprint(\"x =\", solution2[0])\nprint(\"w =\", solution2[1] if len(solution2) > 1 else \"Any value\")\n\n# 3. Solve 7m + 11n = 1\nsolution3 = solve_linear_equation(7, 11, 1)\nprint(\"Solution for 7m + 11n = 1:\")\nprint(\"m =\", solution3[0])\nprint(\"n =\", solution3[1] if len(solution3) > 1 else \"Any value\")"
+  },
+  {
+    "question":"Euclidean Algorithm",
+    "answer": "def extended_gcd(a, b):\n    if b == 0:\n        return a, 1, 0\n    else:\n        d, x, y = extended_gcd(b, a % b)\n        return d, y, x - (a // b) * y\n\ndef find_coefficients(d, a, b):\n    gcd, x, y = extended_gcd(a, b)\n    factor = d // gcd\n    return factor * x, factor * y\n\ndef find_xy(d, a, b):\n    x, y = find_coefficients(d, a, b)\n    return x, y\n\n# Given values\na = 1140\nb = 480\nd = 60\n\n# Finding coefficients for x and y\nx, y = find_xy(d, a, b)\n\nprint(\"x =\", x)\nprint(\"y =\", y)"
+
+  },
+  {
+    "question": "Python Program for Finding Prime Factors and Decrypting RSA Encryption",
+    "answer": "def find_d(phi_n, e):\n    d = 1\n    while True:\n        if (d * e) % phi_n == 1:\n            return d\n        d += 1\n\n# Example usage\nphi_n = 40  # For example, the value of (p-1)(q-1)\ne = 7       # Encryption key\nprint(\"Value of d:\", find_d(phi_n, e))"
+  },
+  {
+    "question": "Identity Matrix Generator",
+    "answer": "def identity_matrix(n):\n    matrix = [[0] * n for _ in range(n)]  # Creating an NxN matrix\n    for i in range(n):\n        matrix[i][i] = 1  # Setting elements on the main diagonal to 1\n    return matrix\n\ndef print_matrix(matrix):\n    for row in matrix:\n        for element in row:\n            print(element, end=\" \")\n        print()\n\ndef main():\n    n = 5  # Size of the matrix\n    identity_matrix_result = identity_matrix(n)\n    print_matrix(identity_matrix_result)\n\nif __name__ == \"__main__\":\n    main()"
+  },
+  {
+    "question":"Division Algorithm",
+    "answer": "def extended_gcd(a, b):\n    if b == 0:\n        return a, 1, 0\n    else:\n        d, x, y = extended_gcd(b, a % b)\n        return d, y, x - (a // b) * y\n\ndef convert_to_base(n, base):\n    result = \"\"\n    while n > 0:\n        result = str(n % base) + result\n        n //= base\n    return result\n\ndef find_coefficients(a, b):\n    gcd, x, y = extended_gcd(a, b)\n    return x, y\n\n# Given values\na = 3\nb = 543\n\n# Finding coefficients using Extended Euclidean Algorithm\nx, y = find_coefficients(a, b)\n\n# Base conversion\nbase_representation = convert_to_base(b, a)\n\nprint(f\"{b} base {a} = {base_representation}\")\nprint(\"Coefficients:\")\nprint(\"x =\", x)\nprint(\"y =\", y)"
+
+
+  },
+
+  {
+    "question": "Python Program for Encrypting a Message using Modular Exponentiation with a Public Key",
+    "answer": "def encrypt(message, public_key):\n    n, e = public_key\n    encrypted_message = [pow(ord(char), e, n) for char in message]\n    return encrypted_message\n\n# Example public key (replace this with your actual public key)\npublic_key = (3233, 17)  # Example values for n and e\n\nmessage = \"Hello, world!\"\nencrypted_message = encrypt(message, public_key)\nprint(\"Encrypted Message:\", encrypted_message)"
+  },
+  {
+    "question": "Python Program to Find Decryption Key (d) using Prime Numbers (p and q) for RSA Encryption",
+    "answer": "def find_primes_and_d():\n    # Function to check if a number is prime\n    def is_prime(num):\n        if num <= 1:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    # Function to find prime factors of a number\n    def prime_factors(num):\n        factors = []\n        for i in range(2, num + 1):\n            while num % i == 0:\n                factors.append(i)\n                num //= i\n        return factors\n\n    # Function to find a suitable d value\n    def find_d(phi_n, e):\n        d = 1\n        while True:\n            if (d * e) % phi_n == 1:\n                return d\n            d += 1\n\n    # Find two large prime numbers p and q\n    p = 17  # Replace with actual value\n    q = 23  # Replace with actual value\n\n    # Calculate n = p * q\n    n = p * q\n\n    # Calculate Euler's totient function phi(n)\n    phi_n = (p - 1) * (q - 1)\n\n    # Choose e, the encryption key\n    e = 7  # Replace with actual value\n\n    # Find d, the decryption key\n    d = find_d(phi_n, e)\n\n    return p, q, n, d\n\n# Example usage\np, q, n, d = find_primes_and_d()\nprint(\"p:\", p)\nprint(\"q:\", q)\nprint(\"n:\", n)\nprint(\"d:\", d)"
+  },
+  {
+    "question":"Euler's φ function",
+    "answer": "from sympy import primefactors, totient\n\nn = 642\n\n# Finding the prime factors of n\nprime_factors = primefactors(n)\n\n# Calculating φ(n)\nphi_n = totient(n)\n\nprint(\"φ(\", n, \") =\", phi_n)"
+
+
+  },
+  {
+    "question":"Congruence",
+    "answer": "def gcd_extended(a, b):\n    if a == 0:\n        return b, 0, 1\n    gcd, x1, y1 = gcd_extended(b % a, a)\n    x = y1 - (b // a) * x1\n    y = x1\n    return gcd, x, y\n\ndef solve_congruence(a, b, m):\n    gcd, x0, y0 = gcd_extended(a, m)\n    if b % gcd != 0:\n        return \"No solution\"\n    x = (x0 * (b // gcd)) % m\n    solutions = []\n    for i in range(gcd):\n        solutions.append((x + i * (m // gcd)) % m)\n    return solutions\n\na = 55\nb = 20\nm = 105\n\nsolutions = solve_congruence(a, b, m)\nprint(\"Solutions:\", solutions)"
+  },
+  {
+    "question": "Python Program for Analyzing Plant Growth and Determining Constant k with a Differential Equation",
+    "answer": "from scipy.optimize import curve_fit\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Data\nt = np.array([0, 1, 2, 3, 4, 5])  # Time\nP = np.array([0, 5, 12, 20, 32, 45])  # Plant size\n\n# Differential equation\ndef diff_eq(t, k, I, N, G):\n    return (1 - np.exp(-k * t)) * I * N * G\n\n# Curve fitting\nparams, covariance = curve_fit(diff_eq, t, P, maxfev=10000)\n\n# Optimized parameters\nk_opt, I_opt, N_opt, G_opt = params\n\n# Plotting the data\nplt.scatter(t, P, label='Actual Data')\nplt.plot(t, diff_eq(t, *params), color='red', label='Curve Fitting')\nplt.xlabel('Time')\nplt.ylabel('Plant Size')\nplt.legend()\nplt.show()\n\nprint(f\"Optimized k constant: {k_opt}\")\nprint(f\"Optimized I constant: {I_opt}\")\nprint(f\"Optimized N constant: {N_opt}\")\nprint(f\"Optimized G constant: {G_opt}\")"
+  }
+]

@@ -1,0 +1,97 @@
+/* Puzzle */
+.letterPuzzle {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+}
+
+table {
+  color: black;
+  border-collapse: collapse;
+  margin: 20px auto;
+
+}
+
+td {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  text-align: center;
+  cursor: pointer;
+}
+
+td:hover {
+  background-color: #f0f0f0;
+}
+
+td:active {
+  background-color: #e0e0e0;
+}
+
+/* Pyramid */
+
+input {
+  background-color: transparent;
+  color: #fff;
+  font-size: 2rem;
+  border: 1px solid white;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  margin: 2px;
+}
+.pyramidContainer {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cell{
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+
+}
+.pagination {
+  display: flex;
+  text-align: center;
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+  /* letter puzzle */
+  .letters {
+    display: none;
+  }
+
+  .letterPuzzle table {
+    width: 90%;
+  }
+
+  .letterPuzzle button {
+    width: 90%;
+  }
+  
+  /* number pyramid */
+
+  .pyramidContainer p {
+    text-align: center;
+    width: 350px;
+    height: auto;
+ 
+  }
+  input{
+    width: 45px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+
+}

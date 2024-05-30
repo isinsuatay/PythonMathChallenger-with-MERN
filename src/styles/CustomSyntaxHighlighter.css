@@ -1,0 +1,37 @@
+.code-block {
+  background-color: #2d2d2d;
+  color: #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  overflow-x: auto;
+}
+.code-block-container {
+  position: relative;
+}
+
+.copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.copy-button:hover {
+  background: transparent;
+}
+
+
+@media screen and (max-width: 768px) {
+  .code-block-container {
+    position: relative;
+    bottom: 20px;
+  }
+
+}
