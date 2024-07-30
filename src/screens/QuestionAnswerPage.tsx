@@ -8,7 +8,7 @@ import Question from '../components/Question';
 import Pagination from '../components/Pagination';
 import Answer from '../components/Answer';
 import CodeEditor from '../components/CodeEditor';
-import '../styles/AnswerQuestion.css';
+import '../styles/QuestionAnswer.css';
 import '../styles/CustomSyntaxHighlighter.css';
 
 

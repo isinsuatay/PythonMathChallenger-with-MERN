@@ -9,7 +9,7 @@ export const runCode = async (req, res) => {
 
   fs.writeFileSync(codePath, code);
 
-  const command = `python ${codePath}`;
+  const command = `python3 ${codePath}`; 
   const child = exec(command, (error, stdout, stderr) => {
     if (error) {
       console.error(`exec error: ${error}`);

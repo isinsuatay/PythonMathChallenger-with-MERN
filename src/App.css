@@ -27,6 +27,19 @@ body {
   /* cursor: none;  */
 
 }
+/* Account Screen */
+.account-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-container h2{
+  margin-top: 100px;
+}
 
 /* Calculator Screen */
 

@@ -24,7 +24,10 @@
    padding: 1rem;
    box-sizing: border-box;
 }
-
+.questionAnswerContainer input{
+  width: 400px;
+  border-radius: 10px;
+}
 @media screen and (max-width: 768px) {
   .questionAnswerContainer{
     height: 250vh;
